@@ -22,7 +22,7 @@
   }
   span.name {
     display: inline-block;
-    transition: 2s ease-in-out;
+    transition: 1.2s ease-in-out;
   }
   h1:hover span.name {
     -webkit-transform: rotateY(180deg);
@@ -34,3 +34,12 @@
     <h1>DOS<span class=name>AY</span>GO.COM</h1>
   </main>
 </body>
+<script>
+  const h = document.querySelector('h1');
+  h.onmouseover = () => {
+    document.title = "DOSYAGO.COM";
+  };
+  h.onmouseout = () => {
+    document.title = "DOSAYGO.COM";
+  };
+</script>
