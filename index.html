@@ -28,18 +28,40 @@
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
   }
+  article {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    height: 30%;
+    border: 2rem solid white;
+    color: white;
+    background-color: white;
+    font-size: 10rem;
+    display: none;
+  }
 </style>
 <body>
   <main>
     <h1>DOS<span class=name>AY</span>GO.COM</h1>
   </main>
+  <article>DOSY</article>
 </body>
 <script>
   const h = document.querySelector('h1');
+  const art = document.querySelector('article');
   h.onmouseover = () => {
     document.title = "DOSYAGO.COM";
   };
   h.onmouseout = () => {
     document.title = "DOSAYGO.COM";
+  };
+  h.onclick = () => {
+    if ( art.style.display == 'none' ) {
+      art.style.display = 'block'
+    } else {
+      art.style.display = 'none';
+    }
   };
 </script>
