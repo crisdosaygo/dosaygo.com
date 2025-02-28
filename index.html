@@ -1,68 +1,213 @@
 <!DOCTYPE html>
-<meta charset=utf-8>
-<meta name=viewport content="device-width, initial-scale=1.0">
-<title>DOSAYGO.COM</title>
-<style>
-  :root {
-    padding: 0;
-    font-size: 2vmax;
-    font-family: sans-serif;
-  }
-  body {
-    box-sizing: border-box;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: lime;
-    color: black;
-    margin: 0;
-  }
-  span.name {
-    display: inline-block;
-    transition: 1.2s ease-in-out;
-  }
-  h1:hover span.name {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-  }
-  article {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width: 50%;
-    height: 30%;
-    border: 2rem solid white;
-    color: white;
-    background-color: black;
-    font-size: 8.85rem;
-    display: none;
-    pointer-events: none;
-  }
-</style>
-<body>
-  <main>
-    <h1>DOS<span class=name>AY</span>GO.COM</h1>
-  </main>
-  <article>DOSY</article>
-</body>
-<script>
-  const h = document.querySelector('h1');
-  const art = document.querySelector('article');
-  h.onmouseover = () => {
-    document.title = "DOSYAGO.COM";
-  };
-  h.onmouseout = () => {
-    document.title = "DOSAYGO.COM";
-  };
-  h.onclick = () => {
-    if ( art.style.display == 'none' ) {
-      art.style.display = 'block'
-    } else {
-      art.style.display = 'none';
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <title>BrowserBox | Secure Remote Browsing with v10 Licensing</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
-  };
-</script>
+    body {
+      background: #f4f7fa;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    nav {
+      background: #1a2a44;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    nav img {
+      width: 40px;
+      height: 40px;
+    }
+    nav h1 {
+      color: #fff;
+      font-size: 1.5rem;
+      margin-left: 1rem;
+      display: inline;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      color: #00b4d8;
+    }
+    header {
+      background: linear-gradient(135deg, #1a2a44, #00b4d8);
+      color: #fff;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      margin-top: 60px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    header h2 {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #ff6b6b;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 1rem;
+    }
+    .cta-button:hover {
+      background: #ff8787;
+    }
+    .secondary-cta {
+      background: #fff;
+      color: #1a2a44;
+    }
+    .secondary-cta:hover {
+      background: #e0e0e0;
+    }
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    #license {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 2rem auto;
+      max-width: 800px;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    #license h2 {
+      color: #1a2a44;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    #license p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    #features {
+      background: #f4f7fa;
+    }
+    #features h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      color: #1a2a44;
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      background: #1a2a44;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    .footer-links {
+      margin-bottom: 1rem;
+    }
+    .footer-links a {
+      color: #00b4d8;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div>
+      <img src="icon.svg" alt="BrowserBox Logo">
+      <h1>BrowserBox</h1>
+    </div>
+    <ul>
+      <li><a href="#license">License</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="mailto:sales@dosaygo.com?subject=BrowserBox%20Licensing">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Secure Your Web with BrowserBox v10</h1>
+    <h2>License Required—Unlock Advanced RBI Now</h2>
+    <a href="mailto:sales@dosaygo.com?subject=Commercial%20License%20Inquiry" class="cta-button">Get a Commercial License</a>
+    <a href="https://tally.so/r/nPvb1x" class="cta-button secondary-cta">Eval License Waitlist</a>
+  </header>
+
+  <section id="license">
+    <h2>Why License BrowserBox?</h2>
+    <p>BrowserBox v10 (released February 28, 2025) requires a license key for <strong>all usage</strong>. Secure your network with cutting-edge remote browser isolation (RBI) and exclusive features—only available with a valid license.</p>
+    <p><strong>Commercial?</strong> Contact <a href="mailto:sales@dosaygo.com">sales@dosaygo.com</a> for pricing.<br><strong>Evaluation?</strong> Join the <a href="https://tally.so/r/nPvb1x">waitlist</a> for a free key.</p>
+    <p><strong>Unlicensed?</strong> Instances shut down after a 2-minute warning: "Your copy of BrowserBox is unlicensed."</p>
+  </section>
+
+  <section id="features">
+    <h2>Your Licensed Advantage</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Zero Latency Browsing</h3>
+        <p>Real-time performance for secure web access.</p>
+      </div>
+      <div class="card">
+        <h3>Advanced Security</h3>
+        <p>Block malware and zero-day threats effortlessly.</p>
+      </div>
+      <div class="card">
+        <h3>Embeddable RBI</h3>
+        <p>Integrate secure browsing into any app.</p>
+      </div>
+      <div class="card">
+        <h3>Mobile-Ready</h3>
+        <p>Consistent protection across all devices.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://dosaygo.com/privacy.txt">Privacy</a>
+      <a href="https://dosaygo.com/terms.txt">Terms</a>
+      <a href="https://github.com/BrowserBox/BrowserBox">GitHub</a>
+      <a href="mailto:sales@dosaygo.com">sales@dosaygo.com</a>
+    </div>
+    <p>© 2024 DOSAYGO Corporation USA. All rights reserved.</p>
+  </footer>
+</body>
+</html>
