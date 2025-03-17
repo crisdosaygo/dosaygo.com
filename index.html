@@ -15,12 +15,12 @@
     body {
       background: #f4f7fa;
       color: #333;
-      line-height: 1.6;
+      line-height: 1.8;
       overflow-x: hidden;
     }
     nav {
       background: #1a2a44;
-      padding: 1rem 2rem;
+      padding: 1.5rem 3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -35,19 +35,20 @@
     }
     nav h1 {
       color: #fff;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       margin-left: 1rem;
       display: inline;
     }
     nav ul {
       list-style: none;
       display: flex;
-      gap: 2rem;
+      gap: 2.5rem;
     }
     nav ul li a {
       color: #fff;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
+      transition: color 0.3s;
     }
     nav ul li a:hover {
       color: #00b4d8;
@@ -56,26 +57,29 @@
       background: linear-gradient(135deg, #1a2a44, #00b4d8);
       color: #fff;
       text-align: center;
-      padding: 6rem 2rem 4rem;
-      margin-top: 60px;
+      padding: 7rem 3rem 5rem;
+      margin-top: 70px;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 1rem;
+      font-weight: 700;
     }
     header h2 {
-      font-size: 1.5rem;
-      font-weight: 300;
+      font-size: 1.6rem;
+      font-weight: 400;
+      opacity: 0.9;
     }
     .cta-button {
       display: inline-block;
       background: #ff6b6b;
       color: #fff;
-      padding: 1rem 2rem;
-      border-radius: 5px;
+      padding: 1rem 2.5rem;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      margin: 1rem;
+      margin: 1rem 0.5rem;
+      transition: background 0.3s;
     }
     .cta-button:hover {
       background: #ff8787;
@@ -83,71 +87,93 @@
     .secondary-cta {
       background: #fff;
       color: #1a2a44;
+      border: 2px solid #1a2a44;
     }
     .secondary-cta:hover {
       background: #e0e0e0;
+      border-color: #00b4d8;
     }
     section {
-      padding: 4rem 2rem;
+      padding: 5rem 3rem;
       text-align: center;
     }
     #license {
       background: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      margin: 2rem auto;
-      max-width: 800px;
-      padding: 2rem;
-      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin: 3rem auto;
+      max-width: 900px;
+      padding: 3rem;
+      border-radius: 12px;
     }
     #license h2 {
       color: #1a2a44;
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
     }
     #license p {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.15rem;
+      margin-bottom: 1.8rem;
+      color: #555;
+    }
+    #license a {
+      color: #00b4d8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    #license a:hover {
+      text-decoration: underline;
     }
     #features {
       background: #f4f7fa;
     }
     #features h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
+      font-size: 2.2rem;
+      margin-bottom: 3rem;
+      color: #1a2a44;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
       max-width: 1200px;
       margin: 0 auto;
     }
     .card {
       background: #fff;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     .card h3 {
       color: #1a2a44;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.3rem;
+    }
+    .card p {
+      color: #666;
     }
     footer {
       background: #1a2a44;
       color: #fff;
-      padding: 2rem;
+      padding: 3rem 2rem;
       text-align: center;
     }
     .footer-links {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
     .footer-links a {
       color: #00b4d8;
       text-decoration: none;
-      margin: 0 1rem;
+      margin: 0 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s;
     }
     .footer-links a:hover {
-      text-decoration: underline;
+      color: #fff;
     }
   </style>
 </head>
@@ -169,20 +195,23 @@
     <h2>License Required—Unlock Advanced RBI Now</h2>
     <a href="https://browse.cloudtabs.net/l" class="cta-button">Get a Commercial License</a>
     <a href="https://browse.cloudtabs.net/M/jl" class="cta-button">Get a Non-Commercial License</a>
-    <a href="https://tally.so/r/nPvb1x" class="cta-button secondary-cta">Evaluation License Waitlist</a>
+    <a href="https://tally.so/r/nPvb1x" class="cta-button secondary-cta">Join Evaluation Waitlist</a>
   </header>
 
   <section id="license">
     <h2>Why License BrowserBox?</h2>
     <p>
-      <strong>Why pay for a BrowserBox License? It's just a browser, and browsers are free!</strong>
-      <br>
-      <strong>Yeah, browsers are free when you're the product</strong>. You are not the product here. BrowserBox is the product. So pay for it&mdash;or choose another browser that makes you pay with your personal data.
+      <strong>"Why pay for a BrowserBox License? Browsers are free!"</strong><br>
+      Browsers are free when <em>you’re</em> the product. With BrowserBox, <em>you’re not</em>. Our cutting-edge remote browser isolation (RBI) technology protects your network—securely and privately. Pay for the product, not with your data.
     </p>
-    <p>BrowserBox requires a license key for <strong>all usage</strong>. Secure your network with cutting-edge remote browser isolation (RBI) and exclusive features—only available with a valid license.</p>
-    <p><strong>Commercial?</strong> Purchase at <a href="https://browse.cloudtabs.net/l">CloudTabs</a>.<br><strong>Undecided and Evaluating?</strong> Join the <a href="https://tally.so/r/nPvb1x">waitlist</a> to apply for an evaluation license.</p>
-    <p><strong>Unlicensed?</strong> Instances shut down after a 2-minute warning and have limitations.</p>
-    <p><strong>Questions?</strong> Contract <a href="mailto:sales@dosaygo.com?subject=BrowserBox>sales@dosaygo.com</a></p>
+    <p>All BrowserBox usage requires a license key. Unlock exclusive features like real-time browsing and advanced security—available only to licensed users.</p>
+    <p>
+      <strong>Commercial Use:</strong> Purchase at <a href="https://browse.cloudtabs.net/l">CloudTabs</a>.<br>
+      <strong>Non-Commercial:</strong> Get it at <a href="https://browse.cloudtabs.net/M/jl">CloudTabs</a>.<br>
+      <strong>Evaluating?</strong> Join the <a href="https://tally.so/r/nPvb1x">waitlist</a> for an evaluation license.
+    </p>
+    <p><strong>Unlicensed?</strong> Instances shut down after a 2-minute warning and face feature limitations.</p>
+    <p><strong>Questions?</strong> Contact <a href="mailto:sales@dosaygo.com?subject=BrowserBox%20Licensing">sales@dosaygo.com</a>.</p>
   </section>
 
   <section id="features">
@@ -190,19 +219,19 @@
     <div class="grid">
       <div class="card">
         <h3>Zero Latency Browsing</h3>
-        <p>Real-time performance for secure web access.</p>
+        <p>Experience real-time performance for secure web access.</p>
       </div>
       <div class="card">
         <h3>Advanced Security</h3>
-        <p>Block malware and zero-day threats effortlessly.</p>
+        <p>Block malware and zero-day threats with ease.</p>
       </div>
       <div class="card">
         <h3>Embeddable RBI</h3>
-        <p>Integrate secure browsing into any app.</p>
+        <p>Integrate secure browsing into any application.</p>
       </div>
       <div class="card">
         <h3>Mobile-Ready</h3>
-        <p>Consistent protection across all devices.</p>
+        <p>Enjoy consistent protection across all devices.</p>
       </div>
     </div>
   </section>
@@ -214,7 +243,7 @@
       <a href="https://github.com/BrowserBox/BrowserBox">GitHub</a>
       <a href="mailto:sales@dosaygo.com">sales@dosaygo.com</a>
     </div>
-    <p>© 2024 DOSAYGO Corporation USA. All rights reserved.</p>
+    <p>© 2025 DOSAYGO Corporation USA. All rights reserved.</p>
   </footer>
 </body>
 </html>
