@@ -53,6 +53,10 @@
     nav ul li a:hover {
       color: #00b4d8;
     }
+    nav > div {
+      display: flex;
+      align-items: center;
+    }
     header {
       background: linear-gradient(135deg, #1a2a44, #00b4d8);
       color: #fff;
@@ -174,6 +178,17 @@
     }
     .footer-links a:hover {
       color: #fff;
+    }
+    @media screen and (max-width:600px) {
+      nav {
+        padding: 1rem;
+        overflow-x: auto;
+      }
+      nav > div {
+        display: flex;
+        align-items: center;
+        padding-right: 1.618em;
+      }
     }
   </style>
 </head>
