@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BrowserBox: Secure, cross-platform remote browser isolation (RBI). Protect your web with stability and transparency—no data sold. Get your license today!">
+  <meta name="keywords" content="remote browser isolation, secure browsing, browser automation, cross-platform browsing, privacy-first RBI">
   <link rel="icon" type="image/svg+xml" href="logo.svg">
-  <title>BrowserBox | Secure Remote Browsing</title>
+  <title>BrowserBox | Secure, Cross-Platform Browsing</title>
   <style>
     * {
       margin: 0;
@@ -66,13 +68,14 @@
     }
     header h1 {
       font-size: 2.8rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       font-weight: 700;
     }
     header h2 {
       font-size: 1.6rem;
       font-weight: 400;
       opacity: 0.9;
+      margin-bottom: 2rem;
     }
     .cta-button {
       display: inline-block;
@@ -82,7 +85,7 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      margin: 1rem 0.5rem;
+      margin: 0.5rem;
       transition: background 0.3s;
     }
     .cta-button:hover {
@@ -101,7 +104,7 @@
       padding: 5rem 3rem;
       text-align: center;
     }
-    #license {
+    #intro, #license {
       background: #fff;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       margin: 3rem auto;
@@ -109,22 +112,22 @@
       padding: 3rem;
       border-radius: 12px;
     }
-    #license h2 {
+    #intro h2, #license h2 {
       color: #1a2a44;
       font-size: 2.2rem;
       margin-bottom: 1.5rem;
     }
-    #license p {
+    #intro p, #license p {
       font-size: 1.15rem;
       margin-bottom: 1.8rem;
       color: #555;
     }
-    #license a {
+    #intro a, #license a {
       color: #00b4d8;
       text-decoration: none;
       font-weight: 600;
     }
-    #license a:hover {
+    #intro a:hover, #license a:hover {
       text-decoration: underline;
     }
     #features {
@@ -160,6 +163,19 @@
     .card p {
       color: #666;
     }
+    #community {
+      background: #fff;
+      padding: 3rem;
+      max-width: 900px;
+      margin: 3rem auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    #community h2 {
+      color: #1a2a44;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
     footer {
       background: #1a2a44;
       color: #fff;
@@ -185,12 +201,13 @@
         overflow-x: auto;
       }
       nav > div {
-        display: flex;
-        align-items: center;
         padding-right: 1.618em;
       }
       header {
-        padding: 2em 1em;
+        padding: 5rem 1rem 3rem;
+      }
+      section {
+        padding: 3rem 1rem;
       }
     }
   </style>
@@ -204,54 +221,59 @@
     <ul>
       <li><a href="#license">License</a></li>
       <li><a href="#features">Features</a></li>
-      <li><a href="mailto:sales@dosaygo.com?subject=BrowserBox%20Licensing">Contact</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="mailto:sales@dosaygo.com?subject=BrowserBox%20Inquiry">Contact</a></li>
     </ul>
   </nav>
 
   <header>
-    <h1>Secure Your Web with BrowserBox</h1>
-    <h2>License Required—Unlock Advanced RBI Now</h2>
-    <a href="https://browse.cloudtabs.net/l" class="cta-button">Get a Commercial License</a>
-    <a href="https://browse.cloudtabs.net/M/jl" class="cta-button">Get a Non-Commercial License</a>
-    <a href="https://tally.so/r/wkv4aM" class="cta-button secondary-cta">Join Evaluation Waitlist</a>
+    <h1>BrowserBox: Secure Browsing, Your Way</h1>
+    <h2>Stable across macOS, Linux, Windows—no data sold, ever.</h2>
+    <a href="https://browse.cloudtabs.net/l" class="cta-button">Get Commercial License</a>
+    <a href="https://browse.cloudtabs.net/M/jl" class="cta-button">Get Non-Commercial License</a>
+    <a href="https://tally.so/r/wkv4aM" class="cta-button secondary-cta">Try Free for 14 Days</a>
   </header>
 
+  <section id="intro">
+    <h2>Why BrowserBox?</h2>
+    <p>BrowserBox delivers cutting-edge <strong>remote browser isolation (RBI)</strong>—tested for stability across macOS, Linux, and Windows. Protect your network, automate workflows, or embed secure browsing into your apps with a solution that’s transparent about data: we collect only for licenses and ops, never sell it.</p>
+    <p><strong>For Developers:</strong> Automate with Puppeteer/Playwright in a secure, stable environment.<br><strong>For Businesses:</strong> Isolate web threats with ease.<br><strong>For Privacy Fans:</strong> Trust an open-source RBI that puts you first.</p>
+    <p><a href="https://github.com/BrowserBox/BrowserBox">Explore on GitHub</a> or <a href="#license">get your license</a> to unlock the full power.</p>
+  </section>
+
   <section id="license">
-    <h2>Why License BrowserBox?</h2>
-    <p>
-      <strong>"Why pay for a BrowserBox License? Browsers are free!"</strong><br>
-      Browsers are free when <em>you’re</em> the product. With BrowserBox, <em>you’re not</em>. Our cutting-edge remote browser isolation (RBI) technology protects your network—securely and privately. Pay for the product, not with your data.
-    </p>
-    <p>All BrowserBox usage requires a license key. Unlock exclusive features like real-time browsing and advanced security—available only to licensed users.</p>
-    <p>
-      <strong>Commercial Use:</strong> Purchase at <a href="https://browse.cloudtabs.net/l">CloudTabs</a>.<br>
-      <strong>Non-Commercial:</strong> Get it at <a href="https://browse.cloudtabs.net/M/jl">CloudTabs</a>.<br>
-      <strong>Evaluating?</strong> Join the <a href="https://tally.so/r/wkv4aM">waitlist</a> for an evaluation license.
-    </p>
-    <p><strong>Unlicensed?</strong> Instances shut down after a 2-minute warning and face feature limitations.</p>
-    <p><strong>Questions?</strong> Contact <a href="mailto:sales@dosaygo.com?subject=BrowserBox%20Licensing">sales@dosaygo.com</a>.</p>
+    <h2>Get Your License</h2>
+    <p><strong>Stability + Security = BrowserBox.</strong> All usage requires a license key—unlicensed instances shut down after 2 minutes. Sign up by April 30, 2025, for 10% off your first year!</p>
+    <p><strong>Commercial:</strong> From $99/user/year—<a href="https://browse.cloudtabs.net/l">Buy Now</a>.<br><strong>Non-Commercial:</strong> $39/user/year flat—<a href="https://browse.cloudtabs.net/M/jl">Get It</a>.<br><strong>Evaluate:</strong> <a href="https://tally.so/r/wkv4aM">Join the waitlist</a> for a 14-day trial.</p>
+    <p>Questions? Email <a href="mailto:sales@dosaygo.com?subject=BrowserBox%20Licensing">sales@dosaygo.com</a>.</p>
   </section>
 
   <section id="features">
-    <h2>Your Licensed Advantage</h2>
+    <h2>Built for You</h2>
     <div class="grid">
       <div class="card">
-        <h3>Zero Latency Browsing</h3>
-        <p>Experience real-time performance for secure web access.</p>
+        <h3>Cross-Platform Stability</h3>
+        <p>Runs seamlessly on macOS, Linux, Windows—tested for reliability.</p>
       </div>
       <div class="card">
-        <h3>Advanced Security</h3>
-        <p>Block malware and zero-day threats with ease.</p>
+        <h3>Privacy-First Design</h3>
+        <p>No data selling—check our <a href="https://dosaygo.com/privacy.txt">privacy policy</a>.</p>
       </div>
       <div class="card">
-        <h3>Embeddable RBI</h3>
-        <p>Integrate secure browsing into any application.</p>
+        <h3>Automation Ready</h3>
+        <p>Pair with Puppeteer/Playwright for secure scripting.</p>
       </div>
       <div class="card">
-        <h3>Mobile-Ready</h3>
-        <p>Enjoy consistent protection across all devices.</p>
+        <h3>Enterprise Security</h3>
+        <p>Block malware and threats with clientless RBI.</p>
       </div>
     </div>
+  </section>
+
+  <section id="community">
+    <h2>Join the BrowserBox Community</h2>
+    <p>Connect with devs and users on <a href="https://github.com/BrowserBox/BrowserBox">GitHub</a>—star us, fork us, or contribute! Coming soon: a Discord for tips, support, and feature requests.</p>
+    <p><a href="https://github.com/BrowserBox/BrowserBox/blob/main/docs/setup-guide.md">Setup Guide</a> | <a href="mailto:support@dosaygo.com">Support</a></p>
   </section>
 
   <footer>
