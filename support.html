@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BrowserBox Support: Get assistance with installation, licensing, and usage. Contact The Dosyago Corporation for enterprise-grade support.">
+  <meta name="keywords" content="BrowserBox support, remote browser isolation help, secure browsing assistance, DOSAYGO support">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <title>BrowserBox | Support</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #eef2f5;
+      color: #2a2a2a;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    nav {
+      background: #0f1c33;
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    nav img {
+      width: 40px;
+      height: 40px;
+    }
+    nav h1 {
+      color: #fff;
+      font-size: 1.7rem;
+      margin-left: 1rem;
+      display: inline;
+      font-weight: 600;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2.5rem;
+    }
+    nav ul li a {
+      color: #d9e1e8;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #00a3cc;
+    }
+    nav > div {
+      display: flex;
+      align-items: center;
+    }
+    header {
+      background: linear-gradient(135deg, #0f1c33 30%, #007ea7 100%);
+      color: #fff;
+      text-align: center;
+      padding: 7rem 3rem 5rem;
+      margin-top: 70px;
+    }
+    header h1 {
+      font-size: 2.9rem;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    header h2 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      opacity: 0.9;
+      margin-bottom: 2.5rem;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #e63946;
+      color: #fff;
+      padding: 1rem 2.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0.5rem;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .cta-button:hover {
+      background: #f25f5c;
+      transform: translateY(-2px);
+    }
+    .secondary-cta {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+    .secondary-cta:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #00a3cc;
+      transform: translateY(-2px);
+    }
+    section {
+      padding: 5rem 3rem;
+      text-align: center;
+    }
+    #support, #support-faq {
+      background: #fff;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      margin: 3rem auto;
+      max-width: 950px;
+      padding: 3.5rem;
+      border-radius: 10px;
+    }
+    #support h2, #support-faq h2 {
+      color: #0f1c33;
+      font-size: 2.3rem;
+      margin-bottom: 1.75rem;
+      font-weight: 600;
+    }
+    #support p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #4a4a4a;
+    }
+    #support a, #support-faq a {
+      color: #007ea7;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    #support a:hover, #support-faq a:hover {
+      color: #00a3cc;
+    }
+    #support-faq {
+      text-align: left;
+    }
+    #support-faq dl {
+      margin-top: 1.5rem;
+    }
+    #support-faq dt {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #0f1c33;
+      margin-bottom: 0.75rem;
+      padding-left: 1rem;
+      border-left: 4px solid #007ea7;
+    }
+    #support-faq dd {
+      font-size: 1rem;
+      color: #4a4a4a;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: #f9fafb;
+      border-radius: 6px;
+      line-height: 1.6;
+    }
+    footer {
+      background: #0f1c33;
+      color: #d9e1e8;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .footer-links {
+      margin-bottom: 1.5rem;
+    }
+    .footer-links a {
+      color: #00a3cc;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .footer-links a:hover {
+      color: #fff;
+    }
+    @media screen and (max-width: 600px) {
+      nav {
+        padding: 1rem;
+        overflow-x: auto;
+      }
+      nav > div {
+        padding-right: 1.618em;
+      }
+      header {
+        padding: 5rem 1rem 3rem;
+      }
+      section {
+        padding: 3rem 1rem;
+      }
+      #support, #support-faq {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div>
+      <img src="logo.svg" alt="BrowserBox Logo">
+      <h1>BrowserBox</h1>
+    </div>
+    <ul>
+      <li><a href="index.html#license">Licensing</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#community">Community</a></li>
+      <li><a href="mailto:sales@dosaygo.com?subject=BrowserBox%20Inquiry">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>BrowserBox Support</h1>
+    <h2>We’re here to help with installation, licensing, and usage.</h2>
+    <a href="mailto:support@dosaygo.com?subject=BrowserBox%20Support%20Request" class="cta-button">Contact Support</a>
+    <a href="https://github.com/BrowserBox/BrowserBox/blob/main/README.md" class="cta-button secondary-cta">View Documentation</a>
+  </header>
+
+  <section id="support">
+    <h2>Get the Help You Need</h2>
+    <p>At DOSAYGO, we’re committed to ensuring your experience with BrowserBox is seamless and secure. Whether you’re an enterprise user, developer, or individual, our support team is ready to assist with installation, configuration, licensing, or technical issues.</p>
+    <p><strong>Contact Us:</strong> Reach out to our support team at <a href="mailto:support@dosaygo.com">support@dosaygo.com</a> for personalized assistance.<br><strong>Documentation:</strong> Explore our comprehensive <a href="https://github.com/BrowserBox/BrowserBox/blob/main/README.md">Deployment Guide</a> on GitHub.<br><strong>Community:</strong> Join our community on <a href="https://github.com/BrowserBox/BrowserBox">GitHub</a> for collaboration and upcoming Discord support.</p>
+    <p>For sales or licensing inquiries, please contact <a href="mailto:sales@dosaygo.com?subject=BrowserBox%20Licensing">sales@dosaygo.com</a>.</p>
+  </section>
+
+  <section id="support-faq">
+    <h2>Support FAQs</h2>
+    <dl>
+      <dt>How do I install BrowserBox on my system?</dt>
+      <dd>BrowserBox supports macOS, Linux, and Windows. Download the installer from our <a href="https://github.com/BrowserBox/BrowserBox/releases">GitHub releases page</a> and follow the instructions in our <a href="https://github.com/BrowserBox/BrowserBox/blob/main/README.md">Deployment Guide</a>. If you encounter issues, contact <a href="mailto:support@dosaygo.com">support@dosaygo.com</a>.</dd>
+
+      <dt>I’m having trouble activating my license—what should I do?</dt>
+      <dd>Ensure you’ve purchased the correct license type (commercial or non-commercial) and that your license key is valid. Refer to our <a href="index.html#license">Licensing FAQs</a> for common issues, or email <a href="mailto:support@dosaygo.com">support@dosaygo.com</a> with your license details for assistance.</dd>
+
+      <dt>Can I use BrowserBox for automated testing with Puppeteer?</dt>
+      <dd>Yes, BrowserBox is optimized for automation with Puppeteer and Playwright. Check our <a href="https://github.com/BrowserBox/BrowserBox/blob/main/README.md">documentation</a> for setup instructions. For specific configurations, reach out to <a href="mailto:support@dosaygo.com">support@dosaygo.com</a>.</dd>
+
+      <dt>My organization needs custom support—how can we get priority assistance?</dt>
+      <dd>Enterprise customers with a commercial license receive priority support. Contact <a href="mailto:support@dosaygo.com">support@dosaygo.com</a> to discuss your needs, or reach out to <a href="mailto:sales@dosaygo.com">sales@dosaygo.com</a> to upgrade your license for premium support options.</dd>
+    </dl>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="https://github.com/BrowserBox/BrowserBox">GitHub</a>
+      <a href="mailto:sales@dosaygo.com">sales@dosaygo.com</a>
+    </div>
+    <p>© 2025 The Dosyago Corporation. All rights reserved.</p>
+  </footer>
+</body>
+</html>
