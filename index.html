@@ -109,7 +109,7 @@
       padding: 5rem 3rem;
       text-align: center;
     }
-    #intro, #license, #license-faq {
+    #intro, #license, #license-faq, #community, #capabilities {
       background: #fff;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
       margin: 3rem auto;
@@ -117,24 +117,24 @@
       padding: 3.5rem;
       border-radius: 10px;
     }
-    #intro h2, #license h2, #license-faq h2 {
+    #intro h2, #license h2, #license-faq h2, #capabilities h2, #community h2 {
       color: #0f1c33;
       font-size: 2.3rem;
       margin-bottom: 1.75rem;
       font-weight: 600;
     }
-    #intro p, #license p {
+    #intro p, #license p, #capabilities p, #community p {
       font-size: 1.1rem;
       margin-bottom: 1.5rem;
       color: #4a4a4a;
     }
-    #intro a, #license a, #license-faq a {
+    #intro a, #license a, #license-faq a, #capabilities a, #community a {
       color: #007ea7;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s ease;
     }
-    #intro a:hover, #license a:hover, #license-faq a:hover {
+    #intro a:hover, #license a:hover, #license-faq a:hover, #capabilities a:hover, #community a:hover {
       color: #00a3cc;
     }
     #features {
@@ -174,6 +174,21 @@
       color: #5a5a5a;
       font-size: 1rem;
     }
+    #capabilities figure {
+      margin: 0;
+      text-align: center;
+    }
+    #capabilities img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+    #capabilities figcaption {
+      font-size: 0.95rem;
+      color: #4a4a4a;
+      font-weight: 500;
+    }
     #community {
       background: #fff;
       padding: 3.5rem;
@@ -181,12 +196,6 @@
       margin: 3rem auto;
       border-radius: 10px;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    }
-    #community h2 {
-      color: #0f1c33;
-      font-size: 2.3rem;
-      margin-bottom: 1.75rem;
-      font-weight: 600;
     }
     #license-faq {
       text-align: left;
@@ -244,7 +253,7 @@
       section {
         padding: 3rem 1rem;
       }
-      #intro, #license, #license-faq, #community {
+      #intro, #license, #license-faq, #community, #capabilities {
         padding: 2rem;
       }
     }
@@ -325,6 +334,37 @@
     </div>
   </section>
 
+  <section id="capabilities">
+    <h2>BrowserBox in Action</h2>
+    <p>Experience a fully-featured browser with enterprise-grade security and seamless functionality. BrowserBox delivers everything you expect from a modern browser, optimized for safety and performance.</p>
+    <div class="grid">
+      <div class="card">
+        <figure>
+          <img width="1392" alt="BrowserBox displays the web, like a normal browser, but enterprise secure." src="/assets/images/web-browsing.jpg" />
+          <figcaption>Secure Web Browsing: Enterprise-grade protection.</figcaption>
+        </figure>
+      </div>
+      <div class="card">
+        <figure>
+          <img width="1392" alt="BrowserBox displays PDFs like a normal browser." src="/assets/images/pdf-viewing.jpg" />
+          <figcaption>Seamless PDF Viewing: Fast and reliable.</figcaption>
+        </figure>
+      </div>
+      <div class="card">
+        <figure>
+          <img width="1392" alt="BrowserBox has DevTools like a normal browser" src="/assets/images/devtools.jpg" />
+          <figcaption>Powerful DevTools: Debug with ease.</figcaption>
+        </figure>
+      </div>
+      <div class="card">
+        <figure>
+          <img width="1392" alt="BrowserBox uploads files, and does many other things, just like a normal browser." src="/assets/images/file-uploads.jpg" />
+          <figcaption>Full Browser Features: Uploads and more.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <section id="community">
     <h2>Engage with Our Community</h2>
     <p>Join a network of professionals and developers on <a href="https://github.com/BrowserBox/BrowserBox">GitHub</a>. Contribute, collaborate, or explore—stay tuned for our upcoming Discord community for real-time support and insights.</p>
@@ -338,7 +378,7 @@
       <a href="https://github.com/BrowserBox/BrowserBox">GitHub</a>
       <a href="mailto:sales@dosaygo.com">sales@dosaygo.com</a>
     </div>
-    <p>&copy; 2025 DOSAYGO Corporation USA. All rights reserved.</p>
+    <p>© 2025 DOSAYGO Corporation USA. All rights reserved.</p>
   </footer>
 </body>
 </html>
