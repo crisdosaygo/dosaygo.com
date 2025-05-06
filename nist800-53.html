@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BrowserBox Shield: NIST 800-53 compliant remote browser isolation for government agencies. Secure, self-hosted, and audit-ready.">
+  <meta name="keywords" content="NIST 800-53, remote browser isolation, government cybersecurity, FIPS encryption, audit logging">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <title>BrowserBox Shield | NIST 800-53 Compliance</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #eef2f5;
+      color: #2a2a2a;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    nav {
+      background: #0f1c33;
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    nav img {
+      width: 40px;
+      height: 40px;
+    }
+    nav h1 {
+      color: #fff;
+      font-size: 1.7rem;
+      margin-left: 1rem;
+      display: inline;
+      font-weight: 600;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2.5rem;
+    }
+    nav ul li a {
+      color: #d9e1e8;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #00a3cc;
+    }
+    nav > div {
+      display: flex;
+      align-items: center;
+    }
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #0f1c33;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 6px;
+      top: 100%;
+      left: 0;
+    }
+    .dropdown-content a {
+      color: #d9e1e8;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+    .dropdown-content a:hover {
+      background: #1a2a44;
+      color: #00a3cc;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    header {
+      background: linear-gradient(135deg, #0f1c33 30%, #007ea7 100%);
+      color: #fff;
+      text-align: center;
+      padding: 7rem 3rem 5rem;
+      margin-top: 70px;
+    }
+    header h1 {
+      font-size: 2.9rem;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    header h2 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      opacity: 0.9;
+      margin-bottom: 2.5rem;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #e63946;
+      color: #fff;
+      padding: 1rem 2.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0.5rem;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .cta-button:hover {
+      background: #f25f5c;
+      transform: translateY(-2px);
+    }
+    section {
+      padding: 5rem 3rem;
+      text-align: center;
+    }
+    #nist-compliance, #features, #contact {
+      background: #fff;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      margin: 3rem auto;
+      max-width: 950px;
+      padding: 3.5rem;
+      border-radius: 10px;
+    }
+    #nist-compliance h2, #features h2, #contact h2 {
+      color: #0f1c33;
+      font-size: 2.3rem;
+      margin-bottom: 1.75rem;
+      font-weight: 600;
+    }
+    #nist-compliance p, #features p, #contact p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #4a4a4a;
+    }
+    #nist-compliance a, #features a, #contact a {
+      color: #007ea7;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    #nist-compliance a:hover, #features a:hover, #contact a:hover {
+      color: #00a3cc;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .card h3 {
+      color: #0f1c33;
+      margin-bottom: 0.8rem;
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+    .card p {
+      color: #5a5a5a;
+      font-size: 1rem;
+    }
+    footer {
+      background: #0f1c33;
+      color: #d9e1e8;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .footer-links {
+      margin-bottom: 1.5rem;
+    }
+    .footer-links a {
+      color: #00a3cc;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .footer-links a:hover {
+      color: #fff;
+    }
+    @media screen and (max-width: 600px) {
+      nav {
+        padding: 1rem;
+        overflow-x: auto;
+      }
+      nav > div {
+        padding-right: 1.618em;
+      }
+      header {
+        padding: 5rem 1rem 3rem;
+      }
+      section {
+        padding: 3rem 1rem;
+      }
+      #nist-compliance, #features, #contact {
+        padding: 2rem;
+      }
+      .dropdown-content {
+        min-width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div>
+      <img src="logo.svg" alt="BrowserBox Logo">
+      <h1>BrowserBox</h1>
+    </div>
+    <ul>
+      <li><a href="/#license">Licensing</a></li>
+      <li><a href="/#features">Features</a></li>
+      <li><a href="/#community">Community</a></li>
+      <li class="dropdown">
+        <a href="/#solutions">Solutions</a>
+        <div class="dropdown-content">
+          <a href="/regulated-enterprise">Regulated Enterprises</a>
+          <a href="/nist800-53">NIST 800-53 Compliance</a>
+          <a href="/hipaa">HIPAA Compliance</a>
+          <a href="/dlp">Data Loss Prevention</a>
+        </div>
+      </li>
+      <li><a href="mailto:sales@dosaygo.com?subject=BrowserBox%20Inquiry">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>BrowserBox Shield: NIST 800-53 Compliance</h1>
+    <h2>Secure, self-hosted remote browser isolation for government agencies.</h2>
+    <a href="mailto:browserbox-nist800-53@dosaygo.com?subject=NIST%20800-53%20Compliance%20Inquiry" class="cta-button">Contact Our NIST Experts</a>
+    <a href="https://tally.so/r/wkv4aM" class="cta-button secondary-cta">Request 14-Day Trial</a>
+  </header>
+
+  <section id="nist-compliance">
+    <h2>Streamline Your ATO with NIST 800-53 Compliance</h2>
+    <p>Government agencies face stringent cybersecurity requirements under NIST SP 800-53 to achieve Authority to Operate (ATO). BrowserBox Shield delivers a self-hosted remote browser isolation (RBI) solution designed to meet key NIST controls, ensuring secure browsing and compliance without complexity.</p>
+    <p>With BrowserBox Shield, your agency can protect against web-based threats like phishing and malware while aligning with FISMA and NIST 800-53 standards. Our source-available platform offers transparency and flexibility, ideal for federal, state, and local government needs.</p>
+  </section>
+
+  <section id="features">
+    <h2>How BrowserBox Shield Meets NIST 800-53</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>FIPS-Validated Encryption</h3>
+        <p>Meets SC-13 and SC-28 with FIPS 140-3 validated AES-256 encryption for data at rest and in transit, securing logs and configurations.</p>
+      </div>
+      <div class="card">
+        <h3>Audit-Ready Logging</h3>
+        <p>Complies with AU-2 and AU-3 by generating timestamped, encrypted logs of user actions and security events, exportable to SIEM systems.</p>
+      </div>
+      <div class="card">
+        <h3>Data Loss Prevention</h3>
+        <p>Supports AC-3 with read-only browsing and granular policies to prevent data leaks, protecting sensitive government information.</p>
+      </div>
+      <div class="card">
+        <h3>Role-Based Access Control</h3>
+        <p>Enforces AC-2 and AC-6 with RBAC, allowing admins to set policies and restrict access, ensuring least privilege.</p>
+      </div>
+      <div class="card">
+        <h3>Self-Hosted Flexibility</h3>
+        <p>Deploy on your infrastructure (Docker, RHEL, Windows) to avoid FedRAMP complexity, with full control and transparency.</p>
+      </div>
+      <div class="card">
+        <h3>Policy Enforcement</h3>
+        <p>Uses signed policy documents to enforce compliance settings, streamlining ATO audits and ensuring operational integrity.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Ready to Secure Your Agency?</h2>
+    <p>Contact our NIST 800-53 experts to discuss how BrowserBox Shield can accelerate your ATO process and enhance cybersecurity. Request a demo or explore our self-hosted deployment options.</p>
+    <a href="mailto:browserbox-nist800-53@dosaygo.com?subject=NIST%20800-53%20Compliance%20Inquiry" class="cta-button">Get in Touch</a>
+    <p>Learn more about our <a href="https://github.com/BrowserBox/BrowserBox">source-available platform</a> or <a href="/#license">secure your license</a>.</p>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://dosaygo.com/privacy.txt">Privacy Policy</a>
+      <a href="https://dosaygo.com/terms.txt">Terms of Service</a>
+      <a href="https://github.com/BrowserBox/BrowserBox">GitHub</a>
+      <a href="mailto:sales@dosaygo.com">sales@dosaygo.com</a>
+    </div>
+    <p>© 2025 DOSAYGO Corporation USA. All rights reserved.</p>
+  </footer>
+</body>
+</html>
