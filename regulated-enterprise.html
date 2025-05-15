@@ -94,7 +94,7 @@
       color: #fff;
       text-align: center;
       padding: 7rem 3rem 5rem;
-      margin-top: 70px;
+      margin-top: 70px; /* Adjust based on nav height */
     }
     header h1 {
       font-size: 2.9rem;
@@ -118,6 +118,8 @@
       font-weight: 600;
       margin: 0.5rem;
       transition: background 0.3s ease, transform 0.2s ease;
+      position: relative; /* For potential ::after elements if used as stretched link anchor */
+      z-index: 2; /* Ensure button text is above stretched link pseudo-element */
     }
     .cta-button:hover {
       background: #f25f5c;
@@ -137,7 +139,7 @@
       padding: 5rem 3rem;
       text-align: center;
     }
-    #regulated-enterprise, #solutions, #contact {
+    #regulated-enterprise, #solutions, #contact { /* Note: original had #regulated-enterprise, #solutions, #contact for common styling */
       background: #fff;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
       margin: 3rem auto;
@@ -178,10 +180,21 @@
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative; /* For stretched link */
     }
     .card:hover {
       transform: translateY(-8px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    /* Stretched link for cards in a .grid that contain a .cta-button */
+    .grid .card > a.cta-button::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1; /* Place it above other card content for clicks, but below button text */
     }
     .card h3 {
       color: #0f1c33;
@@ -238,20 +251,20 @@
 <body>
   <nav>
     <div>
-      <img src="logo.svg" alt="BrowserBox Logo">
+      <img src="logo.svg" alt="BrowserBox Logo"> <!-- Assumes logo.svg is in root or path is /logo.svg -->
       <h1>BrowserBox</h1>
     </div>
     <ul>
-      <li><a href="/#license">Licensing</a></li>
-      <li><a href="/#features">Features</a></li>
-      <li><a href="/#community">Community</a></li>
+      <li><a href="/index.html#license">Licensing</a></li> <!-- Adjusted to point to index.html sections -->
+      <li><a href="/index.html#features">Features</a></li>
+      <li><a href="/index.html#community">Community</a></li>
       <li class="dropdown">
-        <a href="/#solutions">Solutions</a>
+        <a href="/index.html#solutions">Solutions</a> <!-- Adjusted to point to index.html sections -->
         <div class="dropdown-content">
-          <a href="/regulated-enterprise">Regulated Enterprises</a>
-          <a href="/nist800-53">NIST 800-53 Compliance</a>
-          <a href="/hipaa">HIPAA Compliance</a>
-          <a href="/dlp">Data Loss Prevention</a>
+          <a href="/regulated-enterprise.html">Regulated Enterprises</a>
+          <a href="/nist800-53.html">NIST 800-53 Compliance</a>
+          <a href="/hipaa.html">HIPAA Compliance</a>
+          <a href="/dlp.html">Data Loss Prevention</a>
         </div>
       </li>
       <li><a href="mailto:sales@dosaygo.com?subject=BrowserBox%20Inquiry">Contact</a></li>
@@ -262,7 +275,7 @@
     <h1>BrowserBox Shield: Regulated Enterprises</h1>
     <h2>Compliance-ready remote browser isolation for government, healthcare, and finance.</h2>
     <a href="mailto:browserbox-regulated@dosaygo.com?subject=Regulated%20Enterprise%20Inquiry" class="cta-button">Contact Our Experts</a>
-    <a href="https://tally.so/r/wkv4aM" class="cta-button secondary-cta">Request 14-Day Trial</a>
+    <a href="https://tally.so/r/wkv4aM" class="cta-button secondary-cta">Purchase</a>
   </header>
 
   <section id="regulated-enterprise">
@@ -278,17 +291,17 @@
       <div class="card">
         <h3>NIST 800-53 Compliance</h3>
         <p>Meet government ATO requirements with FIPS encryption, audit logging, and role-based access control.</p>
-        <a href="/nist800-53" class="cta-button secondary-cta">Learn More</a>
+        <a href="/nist800-53.html" class="cta-button secondary-cta">Learn More</a>
       </div>
       <div class="card">
         <h3>HIPAA Compliance</h3>
         <p>Protect patient data with HIPAA-aligned RBI, DLP policies, and encrypted audit trails.</p>
-        <a href="/hipaa" class="cta-button secondary-cta">Learn More</a>
+        <a href="/hipaa.html" class="cta-button secondary-cta">Learn More</a>
       </div>
       <div class="card">
         <h3>Data Loss Prevention</h3>
         <p>Prevent data leaks with read-only browsing, granular policies, and real-time monitoring.</p>
-        <a href="/dlp" class="cta-button secondary-cta">Learn More</a>
+        <a href="/dlp.html" class="cta-button secondary-cta">Learn More</a>
       </div>
       <div class="card">
         <h3>Scalable Security</h3>
@@ -302,13 +315,13 @@
     <h2>Ready to Secure Your Enterprise?</h2>
     <p>Contact our compliance experts to discover how BrowserBox Shield can meet your regulatory and security needs. Request a demo or explore our self-hosted deployment options for government, healthcare, or finance.</p>
     <a href="mailto:browserbox-regulated@dosaygo.com?subject=Regulated%20Enterprise%20Inquiry" class="cta-button">Get in Touch</a>
-    <p>Learn more about our <a href="https://github.com/BrowserBox/BrowserBox">source-available platform</a> or <a href="/#license">secure your license</a>.</p>
+    <p>Learn more about our <a href="https://github.com/BrowserBox/BrowserBox">source-available platform</a> or <a href="/index.html#license">secure your license</a>.</p> <!-- Adjusted to point to index.html section -->
   </section>
 
   <footer>
     <div class="footer-links">
-      <a href="https://dosaygo.com/privacy.txt">Privacy Policy</a>
-      <a href="https://dosaygo.com/terms.txt">Terms of Service</a>
+      <a href="/privacy.txt.html">Privacy Policy</a> <!-- Assumed relative path or server config for /privacy.txt.html -->
+      <a href="/terms.txt.html">Terms of Service</a> <!-- Assumed relative path or server config for /terms.txt.html -->
       <a href="https://github.com/BrowserBox/BrowserBox">GitHub</a>
       <a href="mailto:sales@dosaygo.com">sales@dosaygo.com</a>
     </div>
