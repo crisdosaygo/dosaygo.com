@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BrowserBox Activation</title>
+<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+<stripe-pricing-table pricing-table-id="prctbl_1R1ARNBKxtsqOlor8zu2Gt95"
+publishable-key="pk_live_519b8xgBKxtsqOloreQVhWpxIYVYN4FGyf60PLrQUHPGCFxW42ovujJ9n1qzduTAE06uOvHwshX7Gd7P4S3kk5APM00v8ZFDc73">
+</stripe-pricing-table>
+<script>
+  const url = new URL(location.href);
+  const cri = url.searchParams.get('cri');
+  const seats = url.searchParams.get('quantity');
+
+  if (cri) {
+    document.currentScript.previousElementSibling.setAttribute('client-reference-id', cri);
+    fetch('/api/license-visit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ cri })
+    })
+    .then(response => {
+      if (!response.ok) console.warn('Ping failed:', response.status);
+    })
+    .catch(error => console.warn('Ping error:', error));
+
+    // Show alert if quantity is present and not 1 (default)
+    if (seats && seats !== '1') {
+      alert(`\n⚠️ Error selecting ${seats} seats!\n\n\tPlease manually select your subscription, then:
+
+          1. Tap Subscribe.
+          2. Adjust the Qty to ${seats} seats.
+
+      Do this BEFORE you enter your card details to buy.
+
+      `);
+    }
+  }
+</script>
